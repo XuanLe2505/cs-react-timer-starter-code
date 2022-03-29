@@ -15,6 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(/public/hip-square.png);
 }
 
 code {
@@ -25,10 +26,10 @@ code {
 h1 {
   color: var(--text-main-color);
   font-family: "Rouge Script", cursive;
-  font-size: 130px;
+  font-size: 100px;
   font-weight: normal;
-  line-height: 48px;
-  margin: 0 0 50px;
+  /* line-height: 48px; */
+  /* margin: 0 0 50px; */
   text-align: center;
   text-shadow: 1px 1px 2px var(--text-shadow-color);
 }
@@ -41,14 +42,14 @@ p {
 
 .container {
   margin: auto;
-  max-width: 1048px;
+  max-width: 600px;
   height: 100vh;
+}
+.timer__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.timer__wrapper {
   border-radius: 24px;
   background-color: var(--text-shadow-color);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
@@ -73,8 +74,9 @@ p {
   background-color: var(--text-shadow-color);
   font-size: 1.5em;
   border-radius: 100vh;
+  margin: 0 5px;
   border: 1px solid white;
-  padding: 1em;
+  padding: 0.5em 1em;
   transition: ease-in-out 0.3s;
 }
 .button:active {
@@ -87,10 +89,36 @@ p {
 .button:disabled {
   background-color: rgb(170, 164, 164);
 }
-/* .button.active {
-  border: 1px solid var(--text-main-color);
-  background-color: var(--text-main-color);
-} */
+
+hr {
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+}
+
+.split-list {
+  margin-bottom: 30px;
+}
+
+.split-item {
+  display: flex;
+  text-transform: capitalize;
+  color: #b7b8b9;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.split-item > div {
+  margin: 0 50px;
+}
+
+.split-item div:first-child {
+  color: #000;
+}
+
+.split-item .split {
+  color: #f29e26;
+}
+
 @media only screen and (max-device-width: 1280px) {
   * {
     font-size: 0.9em;
